@@ -1,9 +1,10 @@
 package no.kristiania.http;
 
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class QueryStringTest {
 
@@ -22,7 +23,7 @@ public class QueryStringTest {
     @Test
     void shouldReturnNullForMissingParameters(){
         QueryString queryString = new QueryString("body-Hello");
-        Assertions.assertNull(queryString.getParameter("status"));
+        assertNull(queryString.getParameter("status"));
 
     }
 
